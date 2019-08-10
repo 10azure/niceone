@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>作业1</title>
+	<style>
+	body{
+		position: relative;
+	}
+		#cpv{
+			width: 100%;
+			height: 500px;
+			background:cyan;
+			font-size: 100px;
+			color: red;
+			font-weight: 600;
+			text-align:center;
+			line-height: 500px;
+			position: absolute;
+
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="暂停" id="stop">
+	<div id="cpv">10</div>
+</body>
+</html>
+<script>
+	var stop = document.getElementById("stop");
+	var box = document.getElementById("cpv");
+	var s = null;
+	stop.onclick = function(){
+		s = clearInterval(s);
+	}
+	s = setInterval(function(){
+			(cpv.innerHTML) --;
+			if(cpv.innerHTML == 0){
+				cpv.style.display= "none";
+			}
+		
+	},1000)
+
+</script>
